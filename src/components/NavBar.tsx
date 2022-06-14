@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['Contact'];
+const pages = ['stories', 'mission', 'contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const NavBar = () => {
@@ -35,20 +35,20 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar className="navbar" position="static" style={{backgroundColor: "#A0AECD"}}>
+    <AppBar className="navbar" position="static" style={{ backgroundColor: "#A0AECD" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-        <img src="/images/logo.jpg" alt="logo" className="logo" width="50" height="50"/>
+          <img src="/images/logo.jpg" alt="logo" className="logo" width="50" height="50" />
           <Typography
-            variant="h6"
-            // noWrap
+            variant="h4"
+            noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+            sx={{ mr: 1, p: 2, display: { xs: 'none', md: 'flex' }, color: 'black' }}
           >
-            
+            BIRDY
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, color: 'black' }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -74,7 +74,7 @@ const NavBar = () => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: 'block', md: 'none' }
               }}
             >
               {pages.map((page) => (
@@ -88,9 +88,9 @@ const NavBar = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, color: 'black' }}
           >
-            LOGO
+            BIRDY
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
