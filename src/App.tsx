@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // import { getGames } from './features/games/gameSlice';
 // import { useAppDispatch } from './store/store';
 import NavBar from './components/NavBar';
+import Home from './Pages/Home';
 // import GamesPage from './features/games/GamePage';
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        {/* <Route path="/" element={<GamesPage />} /> */}
+        <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
