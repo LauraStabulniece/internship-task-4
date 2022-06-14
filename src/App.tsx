@@ -4,7 +4,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // import { getGames } from './features/games/gameSlice';
 // import { useAppDispatch } from './store/store';
 import NavBar from './components/NavBar';
-import Home from './Pages/Home';
+import Landing from './Pages/Landing';
+import Footer from './components/Footer';
 // import GamesPage from './features/games/GamePage';
 
 function App() {
@@ -22,8 +23,9 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Landing />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
