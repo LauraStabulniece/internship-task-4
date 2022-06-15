@@ -7,7 +7,7 @@ function Footer() {
         <footer>
             <Box>
                 <Container maxWidth="lg"
-                    sx={{ textAlign: "center", mt: 30 }}>
+                    sx={{ textAlign: "center", mt: 90 }}>
                     <Grid container spacing={5}>
                         <Grid item xs={12} sx={{ p: 3, color: 'rgba(68, 68, 63, 0.804)' }}>
                             <Box borderBottom={0.5}>
@@ -25,4 +25,5 @@ function Footer() {
         </footer>
     )
 }
+
 export default Footer;

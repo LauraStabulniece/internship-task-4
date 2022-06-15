@@ -2,9 +2,9 @@
 import './App.css';
 // import { getGames } from './features/games/gameSlice';
 // import { useAppDispatch } from './store/store';
-import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Content from './components/Content';
+import Header from './components/Header';
 // import GamesPage from './features/games/GamePage';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div>
-      <NavBar />
+      <Header />
       <Content />
       <Footer />
     </div>

@@ -7,15 +7,15 @@ import Stories from "../Pages/Stories"
 const Content = () => {
     return (
         <div>
-<Routes>
-    <Route>
-    <Route path="/" element={<Landing />} />
-        <Route path="/stories" element={<Stories />} />
-        <Route path="/mission" element={<Mission />} />
-        <Route path="/contact" element={<Contact />} />
-    </Route>
-</Routes>
+            <Routes>
+                <Route>
+                    <Route path="/" element={<Landing />} />
+                    <Route path="/stories" element={<Stories />} />
+                    <Route path="/mission" element={<Mission />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Route>
+            </Routes>
         </div>
     )
 }
-    export default Content
+export default Content

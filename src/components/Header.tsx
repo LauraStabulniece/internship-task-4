@@ -15,7 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 const pages = ['stories', 'mission', 'contact'];
 const settings = ['Profile', 'Logout'];
 
-const NavBar = () => {
+const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -35,7 +35,7 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar className="navbar" position="static" style={{ backgroundColor: "#A0AECD" }}>
+    <AppBar className="navbar" position="sticky" style={{ backgroundColor: "#A0AECD" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img src="/images/logo.jpg" alt="logo" className="logo" width="50" height="50" />
@@ -99,7 +99,7 @@ const NavBar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block' }}
               >
-                {page}
+              {page} 
               </Button>
             ))}
           </Box>
@@ -138,5 +138,5 @@ const NavBar = () => {
     </AppBar>
   );
 };
-export default NavBar;
+export default Header;
 
