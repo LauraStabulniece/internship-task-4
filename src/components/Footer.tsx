@@ -7,17 +7,15 @@ function Footer() {
         <footer>
             <Box>
                 <Container maxWidth="lg"
-                    sx={{ textAlign: "center", mt: 50 }}>
+                    sx={{ textAlign: "center", mt: 30 }}>
                     <Grid container spacing={5}>
-                        <Grid item xs={12} sx={{ p: 5 }}>
-                            <Box borderBottom={1}>
+                        <Grid item xs={12} sx={{ p: 3, color: 'rgba(68, 68, 63, 0.804)' }}>
+                            <Box borderBottom={0.1}>
                             </Box>
-                            <Box sx={{ pt: 2 }}>
+                            <Box sx={{ pt: 1 }}>
                                 <img src="/images/footerLogo.png" alt="footerLogo" className="logo" width="70" height="70" />
                             </Box>
-                            <Box
-                                sx={{ color: 'rgb(72, 69, 69)' }}
-                            >
+                            <Box>
                                 &copy; 2022 Copyright: Laura Stabulniece
                             </Box>
                         </Grid>
