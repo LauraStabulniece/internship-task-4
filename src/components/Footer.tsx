@@ -10,7 +10,7 @@ function Footer() {
                     sx={{ textAlign: "center", mt: 30 }}>
                     <Grid container spacing={5}>
                         <Grid item xs={12} sx={{ p: 3, color: 'rgba(68, 68, 63, 0.804)' }}>
-                            <Box borderBottom={0.1}>
+                            <Box borderBottom={0.5}>
                             </Box>
                             <Box sx={{ pt: 1 }}>
                                 <img src="/images/footerLogo.png" alt="footerLogo" className="logo" width="70" height="70" />
