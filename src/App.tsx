@@ -1,11 +1,10 @@
 // import React, { useCallback, useEffect } from 'react';
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // import { getGames } from './features/games/gameSlice';
 // import { useAppDispatch } from './store/store';
 import NavBar from './components/NavBar';
-import Landing from './Pages/Landing';
 import Footer from './components/Footer';
+import Content from './components/Content';
 // import GamesPage from './features/games/GamePage';
 
 function App() {
@@ -20,13 +19,11 @@ function App() {
   // }, [])
 
   return (
-    <BrowserRouter>
+    <div>
       <NavBar />
-      <Routes>
-        <Route path="/" element={<Landing />} />
-      </Routes>
-      <Footer/>
-    </BrowserRouter>
+      <Content />
+      <Footer />
+    </div>
   );
 }
 

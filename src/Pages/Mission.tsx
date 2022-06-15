@@ -1,8 +1,8 @@
-const Landing = () => {
+ const Mission = () => {
     return (
         <div>
             <h1 className="trd">MY</h1>
         </div>
     )
 }
-export default Landing
+export default Mission
