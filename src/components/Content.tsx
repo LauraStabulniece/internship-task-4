@@ -4,7 +4,7 @@ import Landing from "../Pages/Landing"
 import Mission from "../Pages/Mission"
 import Stories from "../Pages/Stories"
 
-const Content = () => {
+function Content() {
     return (
         <div>
             <Routes>
@@ -16,6 +16,11 @@ const Content = () => {
                 </Route>
             </Routes>
         </div>
-    )
+    );
 }
 export default Content
+
+
+
+
+

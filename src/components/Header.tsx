@@ -11,11 +11,12 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-router-dom';
 
 const pages = ['stories', 'mission', 'contact'];
-const settings = ['Profile', 'Logout'];
+const settings = ['profile', 'logout'];
 
-const Header = () => {
+function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -35,19 +36,19 @@ const Header = () => {
   };
 
   return (
-    <AppBar className="navbar" position="sticky" style={{ backgroundColor: "#A0AECD" }}>
+    <AppBar className="navbar" position="fixed" style={{ backgroundColor: "#A0AECD" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img src="/images/logo.jpg" alt="logo" className="logo" width="50" height="50" />
-          <Typography
+          <Typography style={{ textDecoration: "none" }}
             variant="h4"
             noWrap
-            component="div"
+            component="a"
+            href="/"
             sx={{ mr: 1, p: 2, display: { xs: 'none', md: 'flex' }, color: 'black' }}
           >
             BIRDY
           </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, color: 'black' }}>
             <IconButton
               size="large"
@@ -79,15 +80,18 @@ const Header = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">
+                    <Link style={{ textDecoration: "none", color: "black" }} to={`/${page}`}>{page}</Link>
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <Typography
+          <Typography style={{ textDecoration: "none" }}
             variant="h6"
             noWrap
-            component="div"
+            component="a"
+            href="/"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, color: 'black' }}
           >
             BIRDY
@@ -97,13 +101,11 @@ const Header = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block' }}
-              >
-              {page} 
+                sx={{ my: 2, color: 'black', display: 'block' }}>
+                <Link style={{ textDecoration: "none", color: "black" }} to={`/${page}`}>{page}</Link>
               </Button>
             ))}
           </Box>
-
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -128,7 +130,9 @@ const Header = () => {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  <Typography textAlign="center">
+                    <Link style={{ textDecoration: "none", color: "black" }} to={`/${setting}`}>{setting}</Link>
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -138,5 +142,5 @@ const Header = () => {
     </AppBar>
   );
 };
-export default Header;
 
+export default Header;
