@@ -1,32 +1,18 @@
-// import React, { useCallback, useEffect } from 'react';
+import React from 'react';
 import './App.css';
-// import { getGames } from './features/games/gameSlice';
-// import { useAppDispatch } from './store/store';
-import Footer from './components/Footer';
 import Content from './components/Content';
-import Header from './components/Header';
+import Login from './Pages/Login';
+import { useSelector } from 'react-redux';
+import { selectUser } from './app/reducers/userSlice';
 
+  const App: React.FC = () => {
+    const isLoggedIn = useSelector(selectUser);
+    return (
+        <div>
+            {isLoggedIn ? <Content/>  : <Login/>}
+        </div>
+      )
+  }
+  
+  export default App
 
-// import GamesPage from './features/games/GamePage';
-
-function App() {
-  // const dispatch = useAppDispatch();
-
-  // const initApp = useCallback(async () => {
-  //   await dispatch(getGames());
-  // }, [dispatch]);
-
-  // useEffect(() => {
-  //   initApp();
-  // }, [])
-
-  return (
-    <div>
-      <Header />
-      <Content />
-      <Footer />
-    </div>
-  );
-}
-
-export default App;
