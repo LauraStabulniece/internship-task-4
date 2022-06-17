@@ -12,5 +12,6 @@
 .welcomeText {
   margin-top: 25%;
   text-align: center;
+  justify-content: center;
 }
 
